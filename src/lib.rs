@@ -58,4 +58,33 @@ mod tests {
     fn test_if_ok_uses_result_value_wrong_assert() {
         Ok::<&str, ()>("OK").if_ok(|e| assert_eq!(e, &"")).unwrap();
     }
+
+    // =========================== if_err() tests ===========================
+
+    #[test]
+    #[should_panic]
+    #[allow(unused_must_use)]
+    fn test_if_err_is_called() {
+        Err::<(), ()>(()).if_err(|_| panic!("Nice"));
+    }
+
+    #[test]
+    fn test_if_err_should_not_be_called() {
+        Ok::<(), ()>(())
+            .if_err(|_| panic!("if_err should not be called"))
+            .unwrap();
+    }
+
+    #[test]
+    #[allow(unused_must_use)]
+    fn test_if_err_uses_result_value() {
+        Err::<(), &str>("error").if_err(|e| assert_eq!(e, &"error"));
+    }
+
+    #[test]
+    #[should_panic]
+    #[allow(unused_must_use)]
+    fn test_if_err_uses_result_value_wrong_assert() {
+        Err::<(), &str>("error").if_err(|e| assert_eq!(e, &""));
+    }
 }
