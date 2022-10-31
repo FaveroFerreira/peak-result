@@ -1,6 +1,6 @@
 # peak result
 
-This is a simple `trait` that extends the standard Result struct to allow you to run some code in case of error or success.
+This is a simple `trait` that extends the standard Result enum to allow you to run some code in case of error or success.
 
 ## Usage
 
