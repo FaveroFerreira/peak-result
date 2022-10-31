@@ -1,8 +1,5 @@
 # How to contribute
 
-
-This crate exists because I find it annoying that it's needed to use `map_err` or `map` so that I can log the results from my functions. However, maybe people find this issue annoying too, and wish to extend upon this basic functionality that `peak-error` provides.
-
 You can use this document to figure out how and where to start.
 
 ## Getting started
