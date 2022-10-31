@@ -28,3 +28,34 @@ where
         self
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use crate::Peak;
+    // =========================== if_ok() tests ============================
+
+    #[test]
+    #[should_panic]
+    fn test_if_ok_is_called() {
+        Ok::<(), ()>(()).if_ok(|_| panic!("Nice")).unwrap();
+    }
+
+    #[test]
+    #[allow(unused_must_use)]
+    fn test_if_ok_should_not_be_called() {
+        Err::<(), ()>(()).if_ok(|_| panic!("if_ok should not be called"));
+    }
+
+    #[test]
+    fn test_if_ok_uses_result_value() {
+        Ok::<&str, ()>("OK")
+            .if_ok(|e| assert_eq!(e, &"OK"))
+            .unwrap();
+    }
+
+    #[test]
+    #[should_panic]
+    fn test_if_ok_uses_result_value_wrong_assert() {
+        Ok::<&str, ()>("OK").if_ok(|e| assert_eq!(e, &"")).unwrap();
+    }
+}
