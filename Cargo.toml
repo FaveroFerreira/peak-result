@@ -1,6 +1,6 @@
 [package]
 name = "peak-result"
-version = "0.0.1"
+version = "1.0.0"
 edition = "2021"
 description = "A simple trait that extends the standard Result enum to allow you to run some code in case of error or success."
 documentation = "https://github.com/FaveroFerreira/peak-result/blob/main/README.md#usage"

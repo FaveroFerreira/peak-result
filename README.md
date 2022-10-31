@@ -10,20 +10,20 @@ This crate exists because I find it annoying that it's needed to use `map_err` o
 
 ```toml
 [dependencies]
-peak-result = "0.0.1"
+peak-result = "1.0.0"
 ```
 
 ```rust
 use peak_result::Peak;
 
 async fn main() {
-    // using `if_err`
+    // using `peak_err`
     let result = some_function_that_returns_result()
-        .if_err(|e| tracing::error!("function failed: {e:?}"));
+        .peak_err(|e| tracing::error!("function failed: {e:?}"));
 
-    // using `if_ok`
+    // using `peak_ok`
     let result = some_function_that_returns_result()
-        .if_ok(|it| tracing::info!("function succeeded: {it:?}"));
+        .peak_ok(|it| tracing::info!("function succeeded: {it:?}"));
 }
 ```
 
