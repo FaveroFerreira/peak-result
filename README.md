@@ -36,9 +36,7 @@ Take a look at our [contributing guide](https://github.com/FaveroFerreira/peak-r
 This project is licensed under the MIT license.
 
 -   MIT license
-    ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
-
-at your option.
+    ([LICENSE](https://github.com/FaveroFerreira/peak-result/blob/main/LICENSE) or http://opensource.org/licenses/MIT)
 
 ### Contribution
 
