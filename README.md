@@ -8,7 +8,7 @@ This is a simple `trait` that extends the standard Result enum to allow you to r
 
 ```toml
 [dependencies]
-peak-result = "0.1.1"
+peak-result = "0.0.1"
 ```
 
 ```rust
