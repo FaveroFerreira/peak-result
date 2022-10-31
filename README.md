@@ -21,7 +21,7 @@ async fn main() {
 
     // using `if_ok`
     let result = some_function_that_returns_result()
-        .if_ok(|it| tracing::info!("function succeeded: {e:?}"));
+        .if_ok(|it| tracing::info!("function succeeded: {it:?}"));
 }
 ```
 
