@@ -27,6 +27,8 @@ async fn main() {
 
 ## Contribuiting
 
+Take a look at our [contributing guide](https://github.com/FaveroFerreira/peak-result/blob/main/CONTRIBUTING.md) if you wish to contribute.
+
 ## License
 
 This project is licensed under the MIT license.
