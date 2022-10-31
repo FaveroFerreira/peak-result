@@ -10,6 +10,7 @@ impl<T, E> Peak<T, E> for std::result::Result<T, E>
 where
     E: std::fmt::Debug,
 {
+    /// Runs a function on `std::result::Result` if it contains an Err variant.
     fn if_err(self, f: fn(&E) -> ()) -> Self {
         if let Err(e) = &self {
             f(e);
@@ -18,6 +19,7 @@ where
         self
     }
 
+    /// Runs a function on `std::result::Result` if it contains an Ok variant.
     fn if_ok(self, f: fn(&T) -> ()) -> Self {
         if let Ok(t) = &self {
             f(t);
