@@ -4,8 +4,6 @@ This is a simple `trait` that extends the standard Result struct to allow you to
 
 ## Usage
 
-See the `examples/` folder for more in-depth usage.
-
 ### Quickstart
 
 ```toml
