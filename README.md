@@ -10,7 +10,7 @@ This crate exists because I find it annoying that it's needed to use `map_err` o
 
 ```toml
 [dependencies]
-peak-result = "1.0.0"
+peak-result = "1.0.1"
 ```
 
 ```rust

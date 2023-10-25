@@ -12,6 +12,7 @@ where
     E: std::fmt::Debug,
 {
     /// Runs a function on `std::result::Result` if it contains an Err variant.
+    #[inline(always)]
     fn peak_err(self, f: fn(&E) -> ()) -> Self {
         if let Err(e) = &self {
             f(e);
@@ -21,6 +22,7 @@ where
     }
 
     /// Runs a function on `std::result::Result` if it contains an Ok variant.
+    #[inline(always)]
     fn peak_ok(self, f: fn(&T) -> ()) -> Self {
         if let Ok(t) = &self {
             f(t);

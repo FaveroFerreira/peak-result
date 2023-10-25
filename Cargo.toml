@@ -1,6 +1,6 @@
 [package]
 name = "peak-result"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 description = "A simple trait that extends the standard Result enum to allow you to run some code in case of error or success."
 documentation = "https://github.com/FaveroFerreira/peak-result/blob/main/README.md#usage"
@@ -13,3 +13,10 @@ categories = ["rust-patterns"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[[bench]]
+name = "peak_bench"
+harness = false
